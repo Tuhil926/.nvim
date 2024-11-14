@@ -54,7 +54,61 @@ require('mason-lspconfig').setup({
 local cmp = require('cmp')
 local cmp_select = { behavior = cmp.SelectBehavior.Select }
 
+local kind_to_hl = {
+    Function = "@function",
+    Method = "@function.method.call",
+    Variable = "@variable",
+    Class = "@type",
+    Interface = "@type",
+    Keyword = "@keyword",
+    Field = "@variable.member",
+    Property = "@property",
+    Text = "Normal",
+    Constant = "@constant",
+    -- Add more mappings as needed
+}
+
+
+
+for kind, hl_group in pairs(kind_to_hl) do
+    local cmp_hl_group = "CmpItemKind" .. kind
+    vim.api.nvim_set_hl(0, cmp_hl_group, { link = hl_group })
+end
+
+local kind_icons = {
+    Function = "ƒ",
+    Method = "m",
+    Constructor = "⌘",
+    Field = "▤",
+    Variable = "𝑥",
+    Class = "ℂ",
+    Interface = "ι",
+    Module = "⊞",
+    Property = "⚙",
+    Unit = "μ",
+    Value = "ν",
+    Enum = "∷",
+    Keyword = "⌥",
+    Snippet = "¶",
+    Color = "◈",
+    File = "",
+    Reference = "※",
+    Folder = "⌂",
+    EnumMember = "≡",
+    Constant = "π",
+    Struct = "⊞",
+    Event = "✶",
+    Operator = "±",
+    TypeParameter = "𝛕",
+}
+
 cmp.setup({
+    formatting = {
+        format = function(entry, vim_item)
+            vim_item.kind = string.format('  %s  %s', kind_icons[vim_item.kind] or '', vim_item.kind)
+            return vim_item
+        end
+    },
     sources = {
         { name = 'path' },
         { name = 'nvim_lsp' },

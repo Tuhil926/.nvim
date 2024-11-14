@@ -27,3 +27,14 @@ vim.cmd([[
     autocmd BufRead,BufNewFile *.decibel,*.dbl,*.in,*.correct,*.wrong set filetype=decibel
   augroup END
 ]])
+
+
+vim.g.material_style = "deep ocean"
+vim.g.gitgutter_sign_added = '▎'
+vim.g.gitgutter_sign_modified = '▎'
+vim.g.gitgutter_sign_removed = '▁'
+vim.g.gitgutter_sign_removed_first_line = '▔'
+vim.g.gitgutter_sign_modified_removed = '▎▁'
+
+vim.g.netrw_bufsettings = 'noma nomod nu rnu nobl nowrap ro'
+vim.g.netrw_liststyle = 3

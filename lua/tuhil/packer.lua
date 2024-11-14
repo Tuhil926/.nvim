@@ -14,6 +14,8 @@ return require('packer').startup(function(use)
     }
 
     use({ 'rose-pine/neovim', as = 'rose-pine' })
+    use({ 'marko-cerovac/material.nvim', as = 'material' })
+    use({ 'Mofiqul/vscode.nvim', as = 'vscode' })
 
     vim.cmd('colorscheme rose-pine')
 

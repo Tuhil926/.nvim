@@ -110,6 +110,11 @@ _G.packer_plugins = {
     path = "/home/tuhil/.local/share/nvim/site/pack/packer/start/mason.nvim",
     url = "https://github.com/williamboman/mason.nvim"
   },
+  material = {
+    loaded = true,
+    path = "/home/tuhil/.local/share/nvim/site/pack/packer/start/material",
+    url = "https://github.com/marko-cerovac/material.nvim"
+  },
   ["nvim-autopairs"] = {
     config = { "\27LJ\2\n@\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\19nvim-autopairs\frequire\0" },
     loaded = false,
@@ -177,6 +182,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/tuhil/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vscode = {
+    loaded = true,
+    path = "/home/tuhil/.local/share/nvim/site/pack/packer/start/vscode",
+    url = "https://github.com/Mofiqul/vscode.nvim"
   }
 }
 
