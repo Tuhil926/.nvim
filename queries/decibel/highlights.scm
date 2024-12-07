@@ -1,4 +1,5 @@
 ;; comments
+(comment) @comment
 (comment_line) @comment
 (comment_block) @comment
 
