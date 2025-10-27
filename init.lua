@@ -90,6 +90,8 @@ vim.o.scrolloff = 10
 -- See `:help 'confirm'`
 vim.o.confirm = true
 
+vim.o.wrap = false
+
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
@@ -685,6 +687,7 @@ require('lazy').setup({
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
         -- javascript = { "prettierd", "prettier", stop_after_first = true },
+        python = { 'black' },
       },
     },
   },
@@ -846,6 +849,8 @@ vim.cmd [[
   highlight GitSignsChange guifg=#5588ff guibg=NONE
   highlight GitSignsDelete guifg=#ff2222 guibg=NONE
 ]]
+
+vim.diagnostic.config { update_in_insert = true }
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

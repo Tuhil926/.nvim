@@ -4,3 +4,5 @@ test.sh
 nvim
 
 spell/
+lua/custom
+lua/kickstart
